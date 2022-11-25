@@ -1,1 +1,17 @@
+on:
+  push:
+    branches: 
+      - master
 
+
+
+jobs:
+  built:
+    run-on: ubuntu-latest
+    steps:
+      - name: 'printing content befor'
+        run: ls
+
+      - uses: actions/checkout@v3
+      - name: 'printing content after'
+        run: ls 
